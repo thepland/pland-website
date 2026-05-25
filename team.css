@@ -1,0 +1,248 @@
+*{
+
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+
+  background:#0a0f1f;
+  color:white;
+}
+
+/* NAVBAR */
+
+nav{
+
+  width:100%;
+
+  height:90px;
+
+  padding:0 8%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  background:rgba(10,15,31,0.85);
+
+  backdrop-filter:blur(10px);
+
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+}
+
+.logo img{
+
+  height:80px;
+}
+
+.back-btn{
+
+  color:white;
+
+  text-decoration:none;
+
+  border:1px solid #00d9ff;
+
+  padding:10px 20px;
+
+  border-radius:30px;
+
+  transition:0.3s;
+}
+
+.back-btn:hover{
+
+  background:#00d9ff;
+
+  color:black;
+}
+
+/* HERO */
+
+.team-hero{
+
+  padding:120px 8% 80px;
+
+  text-align:center;
+}
+
+.team-hero h1{
+
+  font-size:60px;
+
+  color:#00d9ff;
+
+  margin-bottom:20px;
+
+  animation:fadeDown 1s ease;
+}
+
+.team-hero p{
+
+  color:#cfd8dc;
+
+  font-size:18px;
+
+  animation:fadeUp 1.2s ease;
+}
+
+/* TEAM SECTION */
+
+.team-section{
+
+  padding:40px 8% 80px;
+}
+
+.team-section h2{
+
+  font-size:40px;
+
+  margin-bottom:40px;
+
+  color:#00d9ff;
+}
+
+/* TEAM GRID */
+
+.team-container{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+  gap:35px;
+}
+
+/* MEMBER CARD */
+
+.member-card{
+
+  background:#111827;
+
+  border-radius:25px;
+
+  overflow:hidden;
+
+  transition:0.4s ease;
+
+  position:relative;
+
+  width:100%;
+
+  max-width:380px;
+
+  margin:auto;
+}
+.member-card:hover{
+
+  transform:translateY(-12px);
+
+  box-shadow:0 0 25px rgba(0,217,255,0.3);
+}
+
+/* IMAGE */
+.member-card img{
+
+  width:100%;
+
+  height:420px;
+
+  object-fit:cover;
+
+  object-position:center top;
+
+  display:block;
+
+  background:#111827;
+
+  transition:transform 0.5s ease;
+}
+
+.member-card:hover img{
+
+  transform:scale(1.05);
+}
+
+/* INFO */
+
+.member-info{
+
+  padding:25px;
+
+  text-align:center;
+
+  min-height:140px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+.member-info h3{
+
+  line-height:1.4;
+}
+
+.member-info p{
+
+  color:#00d9ff;
+
+  font-size:16px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeDown{
+
+  from{
+
+    opacity:0;
+    transform:translateY(-40px);
+  }
+
+  to{
+
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes fadeUp{
+
+  from{
+
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .team-hero h1{
+
+    font-size:42px;
+  }
+
+  .team-section h2{
+
+    font-size:32px;
+  }
+}

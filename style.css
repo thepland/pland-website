@@ -120,7 +120,7 @@ nav ul li a:hover{
     rgba(17,31,61,0.55)
   ),
 
-  url("team.jpeg");
+  url("team.png");
 
   background-size:cover;
 
@@ -280,16 +280,33 @@ nav ul li a:hover{
 }
 
 .service-container{
+
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+  grid-template-columns:repeat(4,1fr);
+
   gap:30px;
+
+  margin-top:50px;
 }
 
 .service-box{
+
   background:#1f2937;
+
   padding:35px;
+
   border-radius:20px;
+
   transition:0.4s;
+
+  height:100%;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-start;
 }
 
 .service-box:hover{
@@ -311,22 +328,24 @@ nav ul li a:hover{
   color:#cfd8dc;
   line-height:1.7;
 }
-@media(max-width:1000px){
+/* TABLET */
+
+@media(max-width:1100px){
 
   .service-container{
 
     grid-template-columns:repeat(2,1fr);
-
   }
 
 }
+
+/* MOBILE */
 
 @media(max-width:700px){
 
   .service-container{
 
     grid-template-columns:1fr;
-
   }
 
 }
